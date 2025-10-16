@@ -9,26 +9,41 @@ class Home extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // TextButton – สีชมพูพาสเทล
           TextButton(
+            onPressed: () {
+              print("TextButton Click");
+            },
             style: TextButton.styleFrom(
-              foregroundColor: const Color(0xFFFF80AB), // pink pastel
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
             ),
-            onPressed: () {},
-            child: const Text(
-              "Click",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            child: const Text.rich(
+              TextSpan(
+                text: '',
+                children: [
+                  TextSpan(
+                    text: 'Click',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
 
           const SizedBox(height: 10),
 
-          // FilledButton – สีเขียวพาสเทล
           FilledButton(
+            onPressed: () {
+              print("FilledButton Click");
+            },
             style: FilledButton.styleFrom(
-              backgroundColor: const Color(0xFFA5D6A7), // green pastel
+              backgroundColor: Colors.green,
+              foregroundColor: Colors.white,
             ),
-            onPressed: () {},
             child: const Text(
               "Click",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -37,12 +52,15 @@ class Home extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          // OutlinedButton – สีเหลืองพาสเทล
           OutlinedButton(
+            onPressed: () {
+              print("OutlinedButton Click");
+            },
             style: OutlinedButton.styleFrom(
-              backgroundColor: const Color(0xFFFFF59D), // yellow pastel
+              backgroundColor: Colors.yellow,
+              foregroundColor: const Color.fromARGB(51, 255, 255, 255),
+              side: const BorderSide(color: Color.fromARGB(255, 255, 255, 255)),
             ),
-            onPressed: () {},
             child: const Text(
               "Click",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -51,12 +69,14 @@ class Home extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          // ElevatedButton – สีฟ้าพาสเทล
           ElevatedButton(
+            onPressed: () {
+              print("ElevatedButton Click");
+            },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF81D4FA), // blue pastel
+              backgroundColor: Colors.blue,
+              foregroundColor: const Color.fromARGB(50, 255, 255, 255),
             ),
-            onPressed: () {},
             child: const Text(
               "Click",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen/item.dart';
+import 'screen/item.dart'; // ต้องตรงกับ path จริง
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +11,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: const Color(0xFFFDFDFD), // พื้นหลังโทนอ่อน
         appBar: AppBar(
-          title: const Text("CET App my151"),
-          backgroundColor: const Color.fromARGB(255, 233, 191, 161),
+          title: const Text(
+            "CET App my151",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.black87,
+            ),
+          ),
+          backgroundColor: const Color(0xFFB5E0FF), // ฟ้าพาสเทล
           centerTitle: true,
+          elevation: 0,
         ),
-        body: const Item(),
+        body: const Item(), // ใช้งาน Item จาก item.dart
       ),
     );
   }
